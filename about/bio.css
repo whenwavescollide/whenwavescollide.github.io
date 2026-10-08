@@ -1,0 +1,11 @@
+
+.bio-section{position:relative;isolation:isolate;background:#080808 url('../assets/bio/bio-background.jpg') center center/cover no-repeat}
+.bio-section::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.3);z-index:-1}
+.bio-section .section-heading{text-shadow:0 2px 12px #000}
+.bio-section .kicker{color:#fff}
+.bio-section .bio-intro,.bio-section>p,.bio-section hr,.press-grid{position:relative}
+.bio-section>p,.press-grid{background:rgba(0,0,0,.55);padding:14px 18px}
+.bio-section .bio-intro{text-align:center}
+.bio-illustration{max-width:850px;margin:0 auto 34px;text-align:center}
+.bio-illustration img{display:block;width:100%;height:auto;max-height:460px;object-fit:contain;filter:drop-shadow(0 12px 26px rgba(0,0,0,.42))}
+@media(max-width:620px){.bio-illustration{margin-bottom:24px}.bio-illustration img{max-height:340px}.bio-section>p,.press-grid{padding:12px}}
