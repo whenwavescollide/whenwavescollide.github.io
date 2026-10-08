@@ -9,17 +9,20 @@
 .record-heading{text-align:center;margin-bottom:36px;text-shadow:0 2px 16px #000}
 .record-heading p{text-transform:uppercase;font-size:12px;letter-spacing:.25em;margin:0 0 8px;color:#fff}
 .record-heading h2{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:clamp(44px,6vw,76px);line-height:1.1;margin:0}
-.record-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;align-items:center;gap:clamp(32px,6vw,90px)}
+.record-layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;align-items:center;gap:clamp(32px,6vw,90px)}
 .record-visuals{min-width:0;display:grid;justify-items:center;gap:28px}
 .record-art{display:block;width:100%;max-width:500px;text-align:center}
 .record-art img{display:block;width:100%;height:270px;object-fit:contain;filter:drop-shadow(0 10px 20px rgba(0,0,0,.25))}
 .record-star-collapse .record-art img{height:250px}
 .record-video{width:100%;max-width:540px;aspect-ratio:16/9;background:#000;box-shadow:0 8px 30px #0006}
 .record-video iframe{display:block;width:100%;height:100%;border:0}
-.record-listen{width:300px;max-width:100%;display:flex;flex-direction:column;align-items:center;gap:18px;justify-self:center}
-.bandcamp-player{display:block;border:0;width:280px;max-width:100%;height:370px;background:#333;box-shadow:0 8px 30px #0006}
+.record-listen{width:360px;max-width:100%;display:flex;flex-direction:column;align-items:center;gap:18px;justify-self:center}
+.record-listen .record-art{width:100%;max-width:500px}
+.record-listen .record-art img{height:270px}
+.record-listen .record-star-collapse .record-art img{height:250px}
+.bandcamp-player{display:block;border:0;width:100%;max-width:360px;height:370px;background:#333;box-shadow:0 8px 30px #0006}
 .record-link{font-size:13px;text-align:center;padding:10px 14px;background:#080808d9;border:1px solid #ffffff70;border-radius:2px}
 .record-link:hover{background:#fff;color:#000}
 .music-platforms{padding:30px 20px 45px;background:#080808}
 .music-platforms .streaming{margin:0 auto}
-@media(max-width:700px){.record-section{padding:48px 20px 60px}.record-layout{grid-template-columns:1fr;gap:32px}.record-heading{margin-bottom:24px}.record-art img{height:auto;max-height:280px}.record-star-collapse .record-art img{height:220px}.record-listen{width:100%}.record-video{max-width:500px}}
+@media(max-width:700px){.record-section{padding:48px 20px 60px}.record-layout{grid-template-columns:1fr;gap:32px}.record-heading{margin-bottom:24px}.record-art img{height:auto;max-height:280px}.record-star-collapse .record-art img{height:220px}.record-listen{width:100%}.record-listen .record-art{max-width:500px}.record-listen .record-art img{height:auto;max-height:280px}.record-video{max-width:500px}}
