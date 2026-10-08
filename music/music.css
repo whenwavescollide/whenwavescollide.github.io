@@ -29,3 +29,9 @@
 
 /* EP I reprend la disposition du site original : lecteur à gauche, vidéo à droite. */
 @media(min-width:701px){.record-layout-ep-i{grid-template-columns:360px minmax(0,1fr)}.record-layout-ep-i .record-listen{grid-column:1;grid-row:1}.record-layout-ep-i .record-visuals{grid-column:2;grid-row:1}}
+
+/* Page Musique : liens des plateformes affichés sous forme d’icônes uniquement. */
+.music-platforms .streaming{gap:24px}
+.music-platforms .streaming a{width:54px;height:54px;padding:10px;border:1px solid #777;display:grid;place-items:center;transition:background .2s,border-color .2s,transform .2s}
+.music-platforms .streaming a:hover{background:#fff;border-color:#fff;transform:translateY(-2px)}
+.music-platforms .streaming a img{width:31px;height:31px}
