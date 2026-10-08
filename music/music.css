@@ -26,3 +26,6 @@
 .music-platforms{padding:30px 20px 45px;background:#080808}
 .music-platforms .streaming{margin:0 auto}
 @media(max-width:700px){.record-section{padding:48px 20px 60px}.record-layout{grid-template-columns:1fr;gap:32px}.record-heading{margin-bottom:24px}.record-art img{height:auto;max-height:280px}.record-star-collapse .record-art img{height:220px}.record-listen{width:100%}.record-listen .record-art{max-width:500px}.record-listen .record-art img{height:auto;max-height:280px}.record-video{max-width:500px}}
+
+/* EP I reprend la disposition du site original : lecteur à gauche, vidéo à droite. */
+@media(min-width:701px){.record-layout-ep-i{grid-template-columns:360px minmax(0,1fr)}.record-layout-ep-i .record-listen{grid-column:1;grid-row:1}.record-layout-ep-i .record-visuals{grid-column:2;grid-row:1}}
