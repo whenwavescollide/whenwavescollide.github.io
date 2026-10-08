@@ -1,5 +1,13 @@
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#site-nav');
+// Canonicalize old internal links so they never expose index.html in the address bar.
+document.querySelectorAll('a[href]').forEach(link => {
+  const target = new URL(link.href, window.location.href);
+  if (target.origin === window.location.origin && /\/index\.html$/i.test(target.pathname)) {
+    target.pathname = target.pathname.replace(/index\.html$/i, '');
+    link.href = target.href;
+  }
+});
 toggle?.addEventListener('click', () => {
   const expanded = toggle.getAttribute('aria-expanded') === 'true';
   toggle.setAttribute('aria-expanded', String(!expanded));
