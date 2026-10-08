@@ -8,7 +8,7 @@
 .record-inner{max-width:1100px;margin:auto}
 .record-heading{text-align:center;margin-bottom:36px;text-shadow:0 2px 16px #000}
 .record-heading p{text-transform:uppercase;font-size:12px;letter-spacing:.25em;margin:0 0 8px;color:#fff}
-.record-heading h2{font-family:Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:clamp(44px,6vw,76px);line-height:1.1;margin:0}
+.record-heading h2{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:clamp(44px,6vw,76px);line-height:1.1;margin:0}
 .record-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;align-items:center;gap:clamp(32px,6vw,90px)}
 .record-visuals{min-width:0;display:grid;justify-items:center;gap:28px}
 .record-art{display:block;width:100%;max-width:500px;text-align:center}
