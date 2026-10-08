@@ -1,6 +1,6 @@
 
 .contact-page{position:relative;isolation:isolate;min-height:calc(100svh - 56px);padding:70px max(6vw,24px) 88px;background:#090909 url('../assets/contact/contact-background.jpg') center 48%/cover no-repeat}
-.contact-page::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,rgba(0,0,0,.83),rgba(0,0,0,.55) 55%,rgba(0,0,0,.78))}
+.contact-page::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,rgba(0,0,0,.48),rgba(0,0,0,.34) 55%,rgba(0,0,0,.52))}
 .contact-wrap{max-width:1040px;margin:auto}.contact-heading{text-align:center;margin:0 auto 42px}.contact-emblem{width:64px;height:64px;object-fit:contain;margin-bottom:14px;filter:drop-shadow(0 4px 18px #000)}
 .contact-heading .kicker,.card-kicker{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:#d6c187;margin:0 0 10px}
 .contact-heading h1{font-family:Impact,'Arial Narrow',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(42px,6vw,68px);line-height:1.05;margin:0;text-shadow:0 3px 20px #000}
