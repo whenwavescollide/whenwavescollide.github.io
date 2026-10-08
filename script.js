@@ -9,13 +9,6 @@ nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => 
   nav.classList.remove('open');
   toggle?.setAttribute('aria-expanded', 'false');
 }));
-const sections = [...document.querySelectorAll('main section[id]')];
-const links = [...document.querySelectorAll('#site-nav a')];
-const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-  if (entry.isIntersecting) links.forEach(link => link.classList.toggle('active', link.hash === `#${entry.target.id}`));
-}), { rootMargin: '-35% 0px -55% 0px' });
-sections.forEach(section => observer.observe(section));
-
 // Move only the photograph; text, video and controls keep native scrolling.
 const hero = document.querySelector('.hero');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -40,3 +33,14 @@ window.addEventListener('resize', scheduleParallax);
 reducedMotion.addEventListener('change', scheduleParallax);
 renderParallax();
 
+
+// Preserve links that previously pointed to sections of the one-page site.
+const oldSections={music:'music/index.html',concerts:'live/index.html',videos:'videos/index.html',bio:'about/index.html',contact:'contact/index.html'};
+if(hero && oldSections[location.hash.slice(1)]) location.replace(oldSections[location.hash.slice(1)]);
+nav?.addEventListener('keydown', event => {
+  if(event.key === 'Escape') {
+    nav.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.focus();
+  }
+});

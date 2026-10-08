@@ -10,3 +10,15 @@
 @media(max-width:620px){.hero::before{background-position:52% center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::before{transform:none;will-change:auto}}
 
+
+/* Shared layout for separate pages. */
+.inner-page main{padding-top:56px;min-height:calc(100svh - 64px)}
+.inner-page .content-section{min-height:calc(100svh - 120px)}
+.section-heading h1,.home-discover h2{font-family:Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(38px,5vw,60px);line-height:1.05;margin:0;letter-spacing:.015em}
+.home-discover{text-align:center;min-height:45vh;background:#0b0b0b}
+.home-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;max-width:1000px;margin:36px auto 0}
+.home-links a{display:flex;justify-content:space-between;gap:34px;padding:20px 24px;border:1px solid #555;min-width:165px}
+.home-links a:hover{background:#fff;color:#000}
+a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:5px}
+.contact-email{overflow-wrap:anywhere;max-width:100%}
+@media(max-width:620px){.home-links{display:grid;grid-template-columns:1fr 1fr;gap:12px}.home-links a{min-width:0;padding:16px;gap:12px;font-size:14px}}
