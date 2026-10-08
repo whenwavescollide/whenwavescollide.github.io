@@ -34,7 +34,7 @@
 <label for="contact-email">Votre adresse e-mail</label><input id="contact-email" name="email" type="email" autocomplete="email" required placeholder="vous@exemple.fr">
 <label for="contact-subject">Sujet</label><select id="contact-subject" name="subject"><option>Booking / concert</option><option>Presse / interview</option><option>Autre demande</option></select>
 <label for="contact-message">Votre message</label><textarea id="contact-message" name="message" rows="5" required placeholder="Écrivez votre message ici…"></textarea>
-<button class="contact-submit" type="submit">Préparer le courriel <span aria-hidden="true">↗</span></button><p class="form-note">Votre application de messagerie s’ouvrira avec le message prêt à envoyer.</p><p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+<button class="contact-submit" type="submit">Envoyer le message <span aria-hidden="true">↗</span></button><p class="form-note">Le message sera envoyé directement au groupe.</p><p id="form-status" class="form-status" role="status" aria-live="polite"></p>
 </form></section>
 <aside class="contact-side"><section class="contact-card booking-card"><p class="card-kicker">Booking &amp; demandes</p><h2>Contact direct</h2><a class="booking-email" href="mailto:when.waves.collide.officiel@gmail.com">when.waves.collide.officiel@gmail.com</a><p>Pour les concerts, la presse et toute autre demande.</p></section>
 <a class="contact-card external-contact" href="https://docs.google.com/forms/d/e/1FAIpQLSf23RTn0NorIQo3Ra5gFybB-SDaWRlW5SLiRQ_TKi0kqOR2_Q/viewform" target="_blank" rel="noopener"><span class="card-kicker">Vous préférez un formulaire en ligne ?</span><strong>Ouvrir le formulaire de contact <span aria-hidden="true">↗</span></strong></a>
@@ -49,7 +49,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   const key = this.elements.access_key.value.trim();
   const status = document.getElementById('form-status');
   const button = this.querySelector('button[type="submit"]');
-  if (!key || key === '97a9d0ba-c485-4e1f-a05b-fa5fc9c263bf') {
+  if (!key || key === 'COLLER_ICI_LA_CLE_WEB3FORMS') {
     status.textContent = 'Le formulaire doit être activé avec la clé Web3Forms du groupe avant son utilisation.';
     return;
   }
