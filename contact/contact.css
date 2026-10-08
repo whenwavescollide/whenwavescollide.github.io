@@ -1,10 +1,10 @@
 
-.contact-page{position:relative;isolation:isolate;min-height:calc(100svh - 56px);padding:70px max(6vw,24px) 88px;background:#090909 url('../assets/live/concerts-background.jpg') center 42%/cover no-repeat}
+.contact-page{position:relative;isolation:isolate;min-height:calc(100svh - 56px);padding:70px max(6vw,24px) 88px;background:#090909 url('../assets/accueil.jpg') center 48%/cover no-repeat}
 .contact-page::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,rgba(0,0,0,.83),rgba(0,0,0,.55) 55%,rgba(0,0,0,.78))}
 .contact-wrap{max-width:1040px;margin:auto}.contact-heading{text-align:center;margin:0 auto 42px}.contact-emblem{width:64px;height:64px;object-fit:contain;margin-bottom:14px;filter:drop-shadow(0 4px 18px #000)}
 .contact-heading .kicker,.card-kicker{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:#d6c187;margin:0 0 10px}
 .contact-heading h1{font-family:Impact,'Arial Narrow',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(42px,6vw,68px);line-height:1.05;margin:0;text-shadow:0 3px 20px #000}
-.contact-lead{color:#dedede;font-size:17px;margin:13px 0 0}.contact-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(270px,.7fr);gap:22px;align-items:start}
+.contact-lead{color:#dedede;font-size:17px;margin:13px 0 0}.contact-grid{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;gap:22px;align-items:start}
 .contact-card{background:rgba(12,12,12,.91);border:1px solid rgba(226,202,141,.37);box-shadow:0 16px 45px #0005;backdrop-filter:blur(8px);padding:28px}
 .contact-card h2{font-family:Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:28px;letter-spacing:.02em;margin:0 0 22px}
 .contact-card form{display:grid;gap:9px}.contact-card label{font-size:13px;color:#e9e6df;margin-top:8px}
@@ -12,7 +12,7 @@
 .contact-card textarea{resize:vertical;min-height:130px}.contact-card input:focus,.contact-card select:focus,.contact-card textarea:focus{outline:2px solid #c4a45e;outline-offset:2px;border-color:transparent}
 .contact-submit{display:flex;justify-content:space-between;align-items:center;margin-top:13px;padding:14px 17px;border:1px solid #c6a45c;background:#bd9b50;color:#111;font-weight:700;font-size:14px;cursor:pointer}
 .contact-submit:hover{background:#e2c477}.form-note,.form-status{font-size:12px;color:#bbb;margin:4px 0 0;line-height:1.55}
-.contact-side{display:grid;gap:16px}.booking-card h2{margin-bottom:12px}.booking-email{display:block;overflow-wrap:anywhere;font-size:15px;color:#e1c477;margin:0 0 12px}.booking-email:hover{color:#fff}.booking-card>p:last-child{color:#c7c7c7;font-size:13px;margin:0}
+.contact-side{display:none}.booking-card h2{margin-bottom:12px}.booking-email{display:block;overflow-wrap:anywhere;font-size:15px;color:#e1c477;margin:0 0 12px}.booking-email:hover{color:#fff}.booking-card>p:last-child{color:#c7c7c7;font-size:13px;margin:0}
 .external-contact{display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s}.external-contact strong{font-size:14px;font-weight:600}.external-contact:hover{border-color:#e2c477;transform:translateY(-2px)}
 .contact-socials{display:flex;align-items:center;gap:14px;padding:5px 4px}.contact-socials img{display:block;width:32px;height:32px;object-fit:contain}
 @media(max-width:760px){.contact-page{padding:48px 18px 65px}.contact-grid{grid-template-columns:1fr}.contact-heading{margin-bottom:30px}.contact-side{grid-template-columns:1fr 1fr}.contact-socials{grid-column:1/-1;justify-content:center}}
