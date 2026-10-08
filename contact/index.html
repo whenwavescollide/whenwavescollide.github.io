@@ -28,6 +28,8 @@
 <div class="contact-grid">
 <section class="contact-card form-card" aria-labelledby="form-title"><p class="card-kicker">Nous contacter</p><h2 id="form-title">Envoyer un message</h2>
 <form id="contact-form">
+<input type="hidden" name="access_key" value="97a9d0ba-c485-4e1f-a05b-fa5fc9c263bf">
+<input type="checkbox" name="botcheck" class="hidden" style="display:none">
 <label for="contact-name">Votre nom</label><input id="contact-name" name="name" autocomplete="name" required placeholder="Nom ou organisation">
 <label for="contact-email">Votre adresse e-mail</label><input id="contact-email" name="email" type="email" autocomplete="email" required placeholder="vous@exemple.fr">
 <label for="contact-subject">Sujet</label><select id="contact-subject" name="subject"><option>Booking / concert</option><option>Presse / interview</option><option>Autre demande</option></select>
@@ -41,14 +43,34 @@
   <footer><a href="../index.html">WHEN WAVES COLLIDE</a><span>Rock instrumental · Paris</span><a href="#top">Retour en haut ↑</a></footer>
   <script src="../script.js"></script>
 <script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
- event.preventDefault();
- if (!this.reportValidity()) return;
- const data = new FormData(this);
- const subject = '[WWC] ' + data.get('subject') + ' — ' + data.get('name');
- const message = data.get('message') + '\n\n---\nRéponse à : ' + data.get('email');
- document.getElementById('form-status').textContent = 'Votre application de messagerie va s’ouvrir avec le message préparé.';
- window.location.href = 'mailto:when.waves.collide.officiel@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  if (!this.reportValidity()) return;
+  const key = this.elements.access_key.value.trim();
+  const status = document.getElementById('form-status');
+  const button = this.querySelector('button[type="submit"]');
+  if (!key || key === '97a9d0ba-c485-4e1f-a05b-fa5fc9c263bf') {
+    status.textContent = 'Le formulaire doit être activé avec la clé Web3Forms du groupe avant son utilisation.';
+    return;
+  }
+  button.disabled = true;
+  button.textContent = 'Envoi en cours…';
+  status.textContent = '';
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(this)
+    });
+    const result = await response.json();
+    if (!response.ok || !result.success) throw new Error(result.message || 'Échec de l’envoi');
+    status.textContent = 'Merci, votre message a bien été envoyé.';
+    this.reset();
+  } catch (error) {
+    status.textContent = 'Le message n’a pas pu être envoyé. Réessayez ou écrivez-nous directement à when.waves.collide.officiel@gmail.com.';
+  } finally {
+    button.disabled = false;
+    button.innerHTML = 'Envoyer le message <span aria-hidden="true">↗</span>';
+  }
 });
 </script>
 </body>
