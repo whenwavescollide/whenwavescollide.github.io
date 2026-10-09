@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Carnyx — prochain single de When Waves Collide.">
+  <title>Can you hear it? — When Waves Collide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="carnyx.css?v=1">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <main class="carnyx" id="top">
+    <div class="backdrop" aria-hidden="true">
+      <video class="backdrop-video" autoplay muted loop playsinline poster="assets/carnyx-poster.jpg">
+        <source src="assets/carnyx-teaser.mp4" type="video/mp4">
+      </video>
+      <div class="backdrop-fallback"></div>
+    </div>
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="When Waves Collide, accueil"><img class="brand-mark" src="assets/wwc-gold.png" alt=""><span>WHEN WAVES COLLIDE</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Navigation principale">
+        <a class="active" aria-current="page" href="../">Accueil</a>
+        <a href="../music/">Musique</a>
+        <a href="../live/">Concerts</a>
+        <a href="../videos/">Vidéos</a>
+        <a href="../about/">Bio</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+    </header>
+    <section class="announcement" aria-labelledby="headline">
+      <p class="eyebrow">A new signal is coming</p>
+      <h1 id="headline">CAN YOU<br><span>HEAR IT?</span></h1>
+      <div class="teaser-frame" id="teaser-frame">
+        <iframe id="teaser-player" data-src="https://www.youtube-nocookie.com/embed/5EzErzBuGYI?rel=0" title="When Waves Collide — teaser Carnyx" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen hidden></iframe>
+        <a class="teaser-local-preview" id="teaser-local-preview" href="https://www.youtube.com/watch?v=5EzErzBuGYI" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le teaser Carnyx sur YouTube" hidden>
+          <img src="https://i.ytimg.com/vi/5EzErzBuGYI/hqdefault.jpg" alt="Vignette du teaser de Carnyx">
+          <span>Ouvrir le teaser sur YouTube ↗</span>
+        </a>
+      </div>
+      <p class="release-name"><span>NOUVEAU SINGLE</span><b class="signal-word" id="signal-word" aria-hidden="true">······</b><span class="sr-only">Carnyx</span></p>
+      <div class="countdown" aria-label="Compte à rebours avant la sortie de Carnyx">
+        <div><strong id="days">00</strong><span>JOURS</span></div>
+        <i></i><div><strong id="hours">00</strong><span>HEURES</span></div>
+        <i></i><div><strong id="minutes">00</strong><span>MINUTES</span></div>
+        <i></i><div><strong id="seconds">00</strong><span>SECONDES</span></div>
+      </div>
+      <p class="date-note" id="date-note">23 OCTOBRE 2026</p>
+    </section>
+    <footer class="site-footer"><a href="../">WHEN WAVES COLLIDE</a><span>Rock instrumental · Paris</span><a href="#top">Retour en haut ↑</a></footer>
+  </main>
+  <script src="carnyx.js"></script>
+</body>
+</html>
