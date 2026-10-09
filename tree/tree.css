@@ -3,9 +3,9 @@ html{min-height:100%;background:#070707}
 body{margin:0;min-height:100vh;color:#f4f1e8;font:16px/1.5 Arial,Helvetica,sans-serif}
 a{color:inherit;text-decoration:none}
 .tree-page{position:relative;isolation:isolate;min-height:100vh;display:grid;place-items:center;padding:34px 18px;background:#070707 url('../assets/tree-background-poster.jpg') center/cover fixed no-repeat}
-.tree-page::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.76));pointer-events:none}
-.tree-background{position:fixed;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;filter:brightness(.68) saturate(.9)}
-.tree-card{width:min(100%,510px);text-align:center;padding:30px 24px 26px;background:rgba(7,7,7,.57);border:1px solid rgba(217,190,126,.32);box-shadow:0 22px 70px #0008;backdrop-filter:blur(7px)}
+.tree-page::before{content:"";position:fixed;inset:0;z-index:0;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.76));pointer-events:none}
+.tree-background{position:fixed;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover;filter:brightness(.68) saturate(.9)}
+.tree-card{position:relative;z-index:1;width:min(100%,510px);text-align:center;padding:30px 24px 26px;background:rgba(7,7,7,.57);border:1px solid rgba(217,190,126,.32);box-shadow:0 22px 70px #0008;backdrop-filter:blur(7px)}
 .tree-logo{display:inline-flex;width:104px;height:104px;align-items:center;justify-content:center;margin:0 auto 10px}
 .tree-logo img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 5px 18px #000)}
 .eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:10px;color:#d5bd82;margin:3px 0 7px}
