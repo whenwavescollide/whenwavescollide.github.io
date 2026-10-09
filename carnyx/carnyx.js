@@ -43,23 +43,3 @@ siteNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', ()
 }));
 
 
-// La vignette garde l'accueil épuré. Sur une page hébergée, le clic lance le lecteur inline.
-const teaserPlayer = document.getElementById('teaser-player');
-const teaserCover = document.getElementById('teaser-cover');
-const teaserClose = document.getElementById('teaser-close');
-if (window.location.protocol !== 'file:') {
-  teaserCover.addEventListener('click', event => {
-    event.preventDefault();
-    teaserCover.hidden = true;
-    teaserPlayer.src = teaserPlayer.dataset.src;
-    teaserPlayer.hidden = false;
-    teaserClose.hidden = false;
-  });
-  teaserClose.addEventListener('click', () => {
-    teaserPlayer.src = '';
-    teaserPlayer.hidden = true;
-    teaserClose.hidden = true;
-    teaserCover.hidden = false;
-    teaserCover.focus();
-  });
-}
