@@ -1,4 +1,4 @@
-.press-section{position:relative;isolation:isolate;background:#080808 url('../assets/press/presse-background.jpg') center/cover fixed no-repeat}
+.press-section{position:relative;isolation:isolate;background:#080808 url('../assets/press/presse-background.jpg') center 15%/cover fixed no-repeat}
 .press-section::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.58);z-index:-1;pointer-events:none}
 .press-section>.section-heading,.press-group{position:relative;max-width:1140px;margin-left:auto;margin-right:auto}
 .press-section .section-heading{margin-bottom:68px;text-shadow:0 2px 14px #000}
