@@ -1,5 +1,5 @@
-.press-section{position:relative;isolation:isolate;background:#080808 url('../assets/bio/bio-background.jpg') center/cover fixed no-repeat}
-.press-section::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.48);z-index:-1;pointer-events:none}
+.press-section{position:relative;isolation:isolate;background:#080808 url('../assets/press/presse-background.jpg') center/cover fixed no-repeat}
+.press-section::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.58);z-index:-1;pointer-events:none}
 .press-section>.section-heading,.press-group{position:relative;max-width:1140px;margin-left:auto;margin-right:auto}
 .press-section .section-heading{margin-bottom:68px;text-shadow:0 2px 14px #000}
 .press-intro{max-width:640px;margin:18px auto 0;color:#ddd;font-size:15px}
