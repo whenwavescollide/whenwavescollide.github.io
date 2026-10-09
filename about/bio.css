@@ -9,3 +9,13 @@
 .bio-illustration{max-width:850px;margin:0 auto 34px;text-align:center}
 .bio-illustration img{display:block;width:100%;height:auto;max-height:460px;object-fit:contain;filter:drop-shadow(0 12px 26px rgba(0,0,0,.42))}
 @media(max-width:620px){.bio-illustration{margin-bottom:24px}.bio-illustration img{max-height:340px}.bio-section>p,.press-grid{padding:12px}}
+
+/* Citations de presse : disposition alternée comme sur le site original. */
+.bio-section .press-grid{display:flex;flex-direction:column;gap:30px;max-width:1050px;margin:48px auto 0;padding:0;background:transparent}
+.bio-section .press-grid a{display:flex;flex-direction:column;gap:12px;width:min(72%,760px);padding:0 0 18px;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.32);text-align:center;text-shadow:0 2px 10px #000}
+.bio-section .press-grid a:nth-child(odd){align-self:flex-start}
+.bio-section .press-grid a:nth-child(even){align-self:flex-end}
+.bio-section .press-grid a span{font-size:clamp(17px,2vw,22px);line-height:1.55;font-style:italic;color:#fff}
+.bio-section .press-grid a small{margin:0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#ddd}
+.bio-section .press-grid a:hover{color:#fff;border-color:#fff}
+@media(max-width:620px){.bio-section .press-grid{gap:24px;margin-top:34px}.bio-section .press-grid a{width:100%;padding:0 0 16px}.bio-section .press-grid a span{font-size:17px}}
