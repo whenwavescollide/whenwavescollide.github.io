@@ -43,12 +43,23 @@ siteNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', ()
 }));
 
 
-// Depuis un fichier local (file://), YouTube ne reçoit pas de référent HTTP : afficher une vignette ouvrant la vidéo.
+// La vignette garde l'accueil épuré. Sur une page hébergée, le clic lance le lecteur inline.
 const teaserPlayer = document.getElementById('teaser-player');
-const localTeaserLink = document.getElementById('teaser-local-preview');
-if (window.location.protocol === 'file:') {
-  localTeaserLink.hidden = false;
-} else {
-  teaserPlayer.src = teaserPlayer.dataset.src;
-  teaserPlayer.hidden = false;
+const teaserCover = document.getElementById('teaser-cover');
+const teaserClose = document.getElementById('teaser-close');
+if (window.location.protocol !== 'file:') {
+  teaserCover.addEventListener('click', event => {
+    event.preventDefault();
+    teaserCover.hidden = true;
+    teaserPlayer.src = teaserPlayer.dataset.src;
+    teaserPlayer.hidden = false;
+    teaserClose.hidden = false;
+  });
+  teaserClose.addEventListener('click', () => {
+    teaserPlayer.src = '';
+    teaserPlayer.hidden = true;
+    teaserClose.hidden = true;
+    teaserCover.hidden = false;
+    teaserCover.focus();
+  });
 }
