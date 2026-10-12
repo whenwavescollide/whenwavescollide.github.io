@@ -24,7 +24,7 @@ h1 span{color:var(--gold)}
 .teaser-frame{position:relative;width:min(640px,100%);margin:0 auto;background:#000;aspect-ratio:16/9;box-shadow:0 8px 32px #0009;overflow:hidden}
 .teaser-frame iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
 .release-name{margin:19px 0 20px;display:flex;align-items:center;justify-content:center;gap:18px;font-size:10px;letter-spacing:.3em;color:#e8e4d9}
-.signal-word{min-width:7ch;color:var(--gold);font:400 15px/1.2 Anton,Impact,sans-serif;letter-spacing:.32em;opacity:.24}
+.signal-word{flex:0 0 10ch;width:10ch;min-width:10ch;overflow:hidden;white-space:nowrap;text-align:left;color:var(--gold);font:400 15px/1.2 Anton,Impact,sans-serif;letter-spacing:.32em;opacity:.24}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .countdown{display:flex;align-items:center;justify-content:center;gap:clamp(12px,3vw,34px);margin:0 auto 10px}
 .countdown div{min-width:74px;display:flex;flex-direction:column;gap:4px}
