@@ -9,3 +9,9 @@
 .concerts-fallback a{display:inline-block;padding:10px 16px;background:#080808d9;border:1px solid #888}
 .concerts-fallback a:hover{background:#fff;color:#000}
 @media(max-width:620px){.concerts-stage{padding:48px 16px 60px}.bandsintown-panel{padding:18px 12px}.concerts-stage .section-heading{margin-bottom:28px}}
+
+/* Scroll parallax background */
+.concerts-stage{background:none;overflow:hidden}
+.concerts-stage::before{content:"";position:absolute;inset:-35% 0;z-index:-2;background:url('../assets/live/concerts-background.jpg') center center/cover no-repeat;transform:translate3d(0,var(--section-parallax,0px),0);will-change:transform;pointer-events:none}
+.concerts-stage::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.3);z-index:-1;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.concerts-stage::before{transform:none;will-change:auto}}
