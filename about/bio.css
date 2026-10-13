@@ -18,3 +18,9 @@
 .bio-section .press-grid a small{margin:0;font-size:14px;color:#fff}
 .bio-section .press-grid a:hover{color:#fff}
 @media(max-width:760px){.bio-columns{grid-template-columns:1fr;gap:40px}.bio-copy .section-heading{text-align:center}.bio-copy .section-heading h1{font-size:clamp(44px,12vw,68px)}.bio-illustration{margin-bottom:32px}.bio-illustration img{max-height:340px;object-fit:cover}.bio-section .press-grid{gap:30px}.bio-section .press-grid a span{font-size:18px}.bio-copy>p{font-size:17px}}
+
+/* Scroll parallax background */
+.bio-section{background:none;overflow:hidden}
+.bio-section::before{content:"";position:absolute;inset:-35% 0;z-index:-2;background:url('../assets/bio/bio-background.jpg') center center/cover no-repeat;transform:translate3d(0,var(--section-parallax,0px),0);will-change:transform;pointer-events:none}
+.bio-section::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.3);z-index:-1;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.bio-section::before{transform:none;will-change:auto}}
