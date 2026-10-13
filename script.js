@@ -17,21 +17,26 @@ nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => 
   nav.classList.remove('open');
   toggle?.setAttribute('aria-expanded', 'false');
 }));
-// Move only the photograph; text, video and controls keep native scrolling.
+// Parallax on the homepage and the full-width backgrounds on selected pages.
 const hero = document.querySelector('.hero');
+const parallaxSections = Array.from(document.querySelectorAll('.concerts-stage, .videos-section, .bio-section, .contact-page'));
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const compactScreen = window.matchMedia('(max-width: 620px)');
 let parallaxFrame = 0;
-function renderParallax() {
-  parallaxFrame = 0;
-  if (!hero) return;
+function moveBackground(element, property) {
+  if (!element) return;
   if (reducedMotion.matches) {
-    hero.style.removeProperty('--hero-parallax');
+    element.style.removeProperty(property);
     return;
   }
-  const bounds = hero.getBoundingClientRect();
+  const bounds = element.getBoundingClientRect();
   const distance = Math.min(Math.max(-bounds.top, 0), bounds.height);
-  hero.style.setProperty('--hero-parallax', (distance * (compactScreen.matches ? 0.18 : 0.35)).toFixed(2) + 'px');
+  element.style.setProperty(property, (distance * (compactScreen.matches ? 0.18 : 0.35)).toFixed(2) + 'px');
+}
+function renderParallax() {
+  parallaxFrame = 0;
+  moveBackground(hero, '--hero-parallax');
+  parallaxSections.forEach(section => moveBackground(section, '--section-parallax'));
 }
 function scheduleParallax() {
   if (!parallaxFrame) parallaxFrame = requestAnimationFrame(renderParallax);
