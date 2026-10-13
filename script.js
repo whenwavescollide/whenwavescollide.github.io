@@ -31,7 +31,8 @@ function moveBackground(element, property) {
   }
   const bounds = element.getBoundingClientRect();
   const distance = Math.min(Math.max(-bounds.top, 0), bounds.height);
-  element.style.setProperty(property, (distance * (compactScreen.matches ? 0.18 : 0.35)).toFixed(2) + 'px');
+  const amount = property === '--hero-parallax' ? (compactScreen.matches ? 0.18 : 0.35) : (compactScreen.matches ? 0.08 : 0.12);
+  element.style.setProperty(property, (distance * amount).toFixed(2) + 'px');
 }
 function renderParallax() {
   parallaxFrame = 0;
