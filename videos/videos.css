@@ -7,6 +7,8 @@
 
 /* Scroll parallax background */
 .videos-section{background:none;overflow:hidden}
-.videos-section::before{content:"";position:absolute;inset:-35% 0;z-index:-2;background:url('../assets/videos/videos-background.jpg') center center/cover no-repeat;transform:translate3d(0,var(--section-parallax,0px),0);will-change:transform;pointer-events:none}
+.videos-section::before{content:"";position:absolute;inset:-12% 0;z-index:-2;background:url('../assets/videos/videos-background.jpg') center center/cover no-repeat;transform:translate3d(0,var(--section-parallax,0px),0);will-change:transform;pointer-events:none}
 .videos-section::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28);z-index:-1;pointer-events:none}
 @media(prefers-reduced-motion:reduce){.videos-section::before{transform:none;will-change:auto}}
+
+@media(max-width:620px){.videos-section::before{inset:-8% 0}}
