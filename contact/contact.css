@@ -17,3 +17,9 @@
 .contact-socials{display:flex;align-items:center;gap:14px;padding:5px 4px}.contact-socials img{display:block;width:32px;height:32px;object-fit:contain}
 @media(max-width:760px){.contact-page{padding:48px 18px 65px}.contact-grid{grid-template-columns:1fr}.contact-heading{margin-bottom:30px}.contact-side{grid-template-columns:1fr 1fr}.contact-socials{grid-column:1/-1;justify-content:center}}
 @media(max-width:480px){.contact-card{padding:22px 18px}.contact-side{grid-template-columns:1fr}.contact-socials{grid-column:auto}}
+
+/* Scroll parallax background */
+.contact-page{background:none;overflow:hidden}
+.contact-page::before{content:"";position:absolute;inset:-35% 0;z-index:-2;background:url('../assets/contact/contact-background.jpg') center 48%/cover no-repeat;transform:translate3d(0,var(--section-parallax,0px),0);will-change:transform;pointer-events:none}
+.contact-page::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,rgba(0,0,0,.48),rgba(0,0,0,.34) 55%,rgba(0,0,0,.52));pointer-events:none}
+@media(prefers-reduced-motion:reduce){.contact-page::before{transform:none;will-change:auto}}
