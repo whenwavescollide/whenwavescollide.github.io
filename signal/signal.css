@@ -7,9 +7,9 @@ a:hover{color:#ddd}
 .signal-page{position:relative;isolation:isolate;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;background:#050505;padding-top:56px}
 .backdrop{position:absolute;inset:0;z-index:-2;overflow:hidden;background:#050505}
 .backdrop-video,.backdrop-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.backdrop-video{filter:brightness(.42) saturate(.65)}
-.backdrop-fallback{z-index:-1;background:url('../carnyx/assets/carnyx-poster.jpg') center/cover no-repeat;filter:brightness(.42) saturate(.65)}
-.backdrop::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.54),rgba(0,0,0,.3) 45%,rgba(0,0,0,.75)),radial-gradient(ellipse at center,transparent 0,rgba(0,0,0,.38) 100%)}
+.backdrop-video{filter:brightness(.72) saturate(.82)}
+.backdrop-fallback{z-index:-1;background:url('../carnyx/assets/teaser-ok-poster.jpg') center/cover no-repeat;filter:brightness(.72) saturate(.82)}
+.backdrop::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.34),rgba(0,0,0,.14) 45%,rgba(0,0,0,.48)),radial-gradient(ellipse at center,transparent 0,rgba(0,0,0,.18) 100%)}
 .topbar{height:56px;position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:space-between;padding:0 28px;gap:28px;border-bottom:1px solid #1c1c1c}
 .brand{display:flex;align-items:center;gap:14px;font-size:18px;font-weight:300;letter-spacing:.02em;white-space:nowrap}
 .brand-mark{width:40px;height:40px;display:block;object-fit:contain;flex-shrink:0}
