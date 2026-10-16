@@ -1,5 +1,5 @@
-// Sortie de Carnyx : 23 octobre 2026 à minuit, heure de Paris.
-const RELEASE_AT = new Date('2026-10-23T00:00:00+02:00');
+// Sortie de Carnyx : 30 octobre 2026 à minuit, heure de Paris.
+const RELEASE_AT = new Date('2026-10-30T00:00:00+01:00');
 const parts = ['days','hours','minutes','seconds'];
 const pad = value => String(value).padStart(2,'0');
 function updateCountdown(){
