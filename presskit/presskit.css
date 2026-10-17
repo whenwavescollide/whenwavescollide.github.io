@@ -46,3 +46,14 @@
  .presskit-tree{min-height:36vh}
 }
 @media(prefers-reduced-motion:reduce){.download-card{transition:none}.download-card:hover{transform:none}}
+
+.bio-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;text-align:left}
+.bio-card{min-width:0;padding:24px 26px;border:1px solid #382321;background:linear-gradient(145deg,rgba(81,19,17,.18),rgba(14,12,12,.92))}
+.bio-card-long{grid-column:1/-1}
+.bio-label{margin:0 0 13px;color:#ce514a;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.bio-copy{margin:0;color:#d2c9c9;font-size:14px;line-height:1.8}
+.bio-copy p{margin:0 0 14px}
+.bio-copy p:last-child{margin-bottom:0}
+.bio-pending{margin:0;color:#9f8988;font-style:italic}
+.bio-card-pending{display:flex;flex-direction:column;justify-content:center;min-height:130px}
+@media(max-width:620px){.bio-grid{grid-template-columns:1fr;gap:14px}.bio-card{padding:21px}.bio-card-long{grid-column:auto}}
