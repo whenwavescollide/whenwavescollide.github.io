@@ -1,0 +1,48 @@
+.presskit-hero{min-height:58vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 24px 64px;background:radial-gradient(ellipse at center,rgba(102,14,12,.25),transparent 62%),#080606;border-bottom:1px solid #292020}
+.presskit-hero .kicker,.presskit-section .kicker,.presskit-tree .kicker{color:#c92119}
+.presskit-hero h1{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:clamp(52px,9vw,112px);line-height:.9;letter-spacing:.015em;margin:10px 0 18px;text-shadow:0 3px 18px #000}
+.presskit-hero h1 span{color:#c92119}
+.presskit-subtitle{margin:0;color:#eee;font-size:clamp(16px,2vw,21px);letter-spacing:.12em;text-transform:uppercase}
+.presskit-intro{margin:8px 0 24px;color:#bbb}
+.presskit-hero .outline-link,.presskit-tree .outline-link{border-color:#8c2722}
+.presskit-hero .outline-link:hover,.presskit-tree .outline-link:hover{background:#a91e18;color:#fff}
+.presskit-section{background:#0a0909}
+.download-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.download-card{min-height:250px;padding:28px 30px;border:1px solid #382321;background:linear-gradient(145deg,rgba(81,19,17,.22),rgba(14,12,12,.92));display:flex;flex-direction:column;transition:transform .2s ease,border-color .2s ease,background .2s ease}
+.download-card:hover{transform:translateY(-4px);border-color:#a33a32;background:linear-gradient(145deg,rgba(118,25,21,.3),rgba(14,12,12,.95))}
+.download-index{font-size:10px;letter-spacing:.22em;color:#ce514a}
+.download-card h3{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:clamp(25px,3vw,34px);margin:12px 0 8px}
+.download-card p{color:#bdb6b6;margin:0 0 24px;max-width:48ch}
+.download-action{margin-top:auto;color:#ed625a;font-size:13px;font-weight:700;letter-spacing:.04em}
+.download-action b{margin-left:7px;font-size:17px}
+.presskit-videos{background:#080808}
+.presskit-video-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.presskit-video{min-width:0}
+.presskit-video iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000;box-shadow:0 8px 30px #0008}
+.presskit-video p{margin:9px 0 0;color:#ccc;font-size:13px;letter-spacing:.04em}
+.presskit-video-grid .presskit-video:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - 12px);justify-self:center}
+.channel-link{text-align:center;margin:38px 0 0}
+.channel-link .outline-link{border-color:#555}
+.channel-link .outline-link:hover{background:#fff;color:#000}
+.presskit-bios{background:#0b0909;text-align:center}
+.bio-pending{max-width:650px;margin:0 auto 24px;color:#c9b4b3}
+.bio-types{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.bio-types span{border:1px solid #422522;color:#d28a85;padding:7px 13px;font-size:11px;letter-spacing:.08em}
+.presskit-tree{text-align:center;min-height:42vh;background:radial-gradient(ellipse at center,rgba(110,18,15,.18),transparent 68%),#080707}
+.presskit-tree h2{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(34px,5vw,56px);font-weight:400;margin:0 0 8px}
+.presskit-tree>p:not(.kicker){color:#bbb;margin:0 auto 22px}
+.presskit-tree .kicker{margin:0 0 10px}
+.presskit-page footer{border-top:1px solid #282020}
+.presskit-page footer a:first-child{color:#eee}
+.presskit-page footer a:last-child{color:#c39898}
+.presskit-page .topbar nav a:hover:after,.presskit-page .topbar nav a:focus-visible:after{background:#c92119}
+@media(max-width:620px){
+ .presskit-hero{min-height:48vh;padding:92px 18px 46px}
+ .presskit-hero h1{font-size:clamp(48px,15vw,76px)}
+ .presskit-intro{max-width:34ch}
+ .download-grid,.presskit-video-grid{grid-template-columns:1fr}
+ .download-card{min-height:220px;padding:24px}
+ .presskit-video-grid .presskit-video:last-child:nth-child(odd){grid-column:auto;width:auto}
+ .presskit-tree{min-height:36vh}
+}
+@media(prefers-reduced-motion:reduce){.download-card{transition:none}.download-card:hover{transform:none}}
