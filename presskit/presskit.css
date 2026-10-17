@@ -7,7 +7,10 @@
 .presskit-hero .outline-link,.presskit-tree .outline-link{border-color:#8c2722}
 .presskit-hero .outline-link:hover,.presskit-tree .outline-link:hover{background:#a91e18;color:#fff}
 .presskit-section{background:#0a0909}
-.download-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+/* Compact the downloads block: content height plus intentional, balanced spacing. */
+#downloads.presskit-section{min-height:0;padding-top:56px;padding-bottom:48px}
+#downloads .section-heading{margin-bottom:28px}
+.download-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .download-card{min-height:0;padding:20px 24px;border:1px solid #382321;background:linear-gradient(145deg,rgba(81,19,17,.22),rgba(14,12,12,.92));display:flex;flex-direction:column;transition:transform .2s ease,border-color .2s ease,background .2s ease}
 .download-card:hover{transform:translateY(-4px);border-color:#a33a32;background:linear-gradient(145deg,rgba(118,25,21,.3),rgba(14,12,12,.95))}
 .download-index{font-size:10px;letter-spacing:.22em;color:#ce514a}
@@ -41,6 +44,8 @@
  .presskit-hero h1{font-size:clamp(40px,12vw,64px)}
  .presskit-intro{max-width:34ch}
  .download-grid,.presskit-video-grid{grid-template-columns:1fr}
+ #downloads.presskit-section{padding-top:46px;padding-bottom:38px}
+ #downloads .section-heading{margin-bottom:24px}
  .download-card{min-height:0;padding:20px 22px}
  .presskit-video-grid .presskit-video:last-child:nth-child(odd){grid-column:auto;width:auto}
  .presskit-tree{min-height:36vh}
