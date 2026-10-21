@@ -15,6 +15,7 @@ h1{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;font-siz
 .tree-link{min-height:56px;display:grid;grid-template-columns:30px 1fr 20px;align-items:center;gap:13px;text-align:left;padding:10px 15px;background:rgba(15,15,15,.83);border:1px solid rgba(255,255,255,.27);transition:background .2s,border-color .2s,transform .2s}
 .tree-link:hover{background:rgba(37,32,21,.96);border-color:#d5bd82;transform:translateY(-2px)}
 .tree-link img{width:28px;height:28px;object-fit:contain}
+.tree-link[href*="tiktok.com"] img{background:#000;border-radius:50%;padding:4px}
 .tree-link>span:nth-child(2){font-size:14px;font-weight:600}
 .tree-link .arrow{color:#d5bd82;text-align:right;font-size:18px}
 .tree-link.featured{border-color:#c9a95f;background:rgba(181,145,66,.2)}
