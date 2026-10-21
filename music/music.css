@@ -38,6 +38,7 @@
 .music-platforms .streaming a{width:31px;height:31px;padding:0;border:0;background:transparent;display:grid;place-items:center;transition:opacity .2s,transform .2s}
 .music-platforms .streaming a:hover{background:transparent;border:0;opacity:.8;transform:translateY(-2px)}
 .music-platforms .streaming a img{width:31px;height:31px}
+.music-platforms .streaming a[aria-label="TikTok"] img{background:#000;border-radius:50%;padding:4px}
 
 @media(max-width:700px){.record-section::before{background:linear-gradient(180deg,#050505 0,rgba(5,5,5,0) 72px),linear-gradient(90deg,rgba(0,0,0,.34),rgba(0,0,0,.62))}.record-section::after{height:85px}}
 @media(prefers-reduced-motion:reduce){.record-section{scroll-behavior:auto}}
